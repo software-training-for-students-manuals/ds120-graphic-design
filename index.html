@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+
+<!-- 
+WELCOME USER! You've reached the source code for a manual created by STS. If you plan on updating or editing this manual, then you're in the right place!
+
+Before editing this manual, please read through the manual editing guide. It is important that we adhere to the conventions set in the guide in order to maintain quality and consistency across all manuals.
+
+A few things to note:
+
+* In order to have a working preview with accurate CSS and functional JavaScript, you will need a copy of the /master-files folder in the same parent directory as the folder with your manual editing files in it, e.g. if you have a folder on your desktop "STS Manuals", and you're editing the Excel 1 manual in the "excel1" folder and the Photoshop 1 folder in the "photoshop1" folder, you will need to have the "master-files" folder in "STS Manuals" as well, since the manual files link to the CSS/Javascript using relative links. Your folder will look like this: 
+
+├STS Manuals 
+├╴╴excel1
+├╴╴╴╴╴images
+├╴╴╴╴╴class_files
+├╴╴master-files
+├╴╴photoshop1
+├╴╴╴╴╴images
+├╴╴╴╴╴class_files
+
+
+* Manuals should be arranged into Topics, which are enclosed in the <section class="topic"> tag, and followed immediately by an <h1> tag with the topic name in it, e.g.
+
+<section class="topic">
+<h1>Topic name</h1>
+<p>Neat and helpful information goes here</p>
+</section>
+
+The <section class="topic"> and following <h1> element are how the manual's JavaScript automagically builds the Topics outline and creates the links, so if they are not there, the manual will be without a table of contents and its friends will probably make fun of it (which is decidedly not cool).
+
+* Unless you are changing the contents of the <title></title> tag, you should not have to touch the <head> portion of this document (unless instructed to do so). This tag connects the HTML to the CSS and JavaScript that keep the manual functioning. Look for the comment tag that says "MAIN CONTENT", and you may edit there.
+
+
+Good luck, and have fun!
+
+-->
+
+<head>
+
+    <!-- Manual title -->
+    <title>Graphic Design with Illustrator</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Software manual provided by Software Training for Students at the University of Wisconsin.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' id='uwmadison-fonts-css' href='https://brand.wisc.edu/content/themes/uw-theme/dist/fonts/uw160/fonts.css?ver=1.1.1' type='text/css' media='all' />
+    <link rel="stylesheet" type="text/css" href="../master-files/css/stylesheet.css">
+    <script src="../master-files/highlight.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="../master-files/smooth-scroll.js"></script>
+    <script src="../master-files/primary-functions.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="../master-files/ga.js"></script>
+
+</head>
+
+<body>
+    <!-- begin front page -->
+
+    <div class="manual-front-page">
+        <div id="coverpage-title">
+            <h1>Graphic Design with Illustrator</h1>
+            <h2>Design Studies 120 Project: Book Jacket Design</h2>
+        </div>
+        <div id="about-page"></div>
+        <div id="outline"></div>
+    </div>
+    <!-- BEGIN MAIN CONTENT -->
+
+    <section class="topic">
+       <style>
+/*
+        video {
+            max-width: 640px;
+           }
+*/
+        </style>
+        <h1 class="no-top-margin">Introduction</h1>
+        <video class = "large" autoplay loop muted playsinline src="images/24-placetexture.mp-4">Test</video>
+
+        <p>This manual teaches some of the tools and techniques that are helpful for work in graphic design when using Adobe Photoshop and Illustrator. It is not a comprehensive guide to the programs, but it introduces a number of important features that you are likely to encounter when doing the work of a graphic designer.</p>
+        <p>Some of the things covered include: </p>
+        <ul>
+            <li>
+                <p>Basic Editing in Photoshop</p>
+            </li>
+            <li>
+                <p>Using the Quick Selection Tool and Masking</p>
+            </li>
+            <li>
+                <p>Creating artboards in Illustrator</p>
+            </li>
+            <li>
+                <p>Importing images from external sources</p>
+            </li>
+            <li>
+                <p>Working with type</p>
+            </li>
+            <li>
+                <p>Creating and modifying shapes</p>
+            </li>
+            <li>
+                <p>Creating clipping masks from type and shapes</p>
+            </li>
+            <li>
+                <p>Changing the appearance of objects with Strokes and Fills</p>
+            </li>
+        </ul>
+        <p>In this manual, we will walk through the creation of a basic book cover, adding type, shapes, and imported images to complete our design.</p>
+
+        <div class="full-width-image">
+            <img src="images/FinalCover.png" alt="Harry Potter book cover - final project">
+        </div>
+    </section>
+
+    <section class="topic">
+        <h1>Download the Class Files</h1>
+        <p>Download the <strong>Class Files</strong> from the link above. If you are using Mac iOS, just click once on the downloaded file to use it. If you are using Windows, make sure to Extract the files by double clicking on the downloaded zip file and clicking "Extract" near the top of the pop-up window.</p>.
+    </section>
+
+    <section>
+        <h1 class="no-top-margin">Editing Basics in Adobe Photoshop</h1>
+        <div class="full-width-image">
+            <img src="images/01-photoshop-logo.png" alt="photoshop logo">
+        </div>
+        <p>Adobe Photoshop is an excellent software to edit the appearance of raster images such as JPEG and PNG files. We will begin our example project by adding a Layer Mask and Adjustment Layers to edit the brightness/contrast, levels, hue/saturation, and color of our background image.</p>
+
+        <h2>Opening a File in Photoshop</h2>
+        <p>Before any editing can be accomplished, you first have to bring in an image file to Photoshop!</p>
+        <ol class="instruction-list">
+            <li>After opening Adobe Photoshop, go to <strong>File > Open...</strong> and find the image titled <strong>castle.jpg</strong> in the folder you downloaded</li>
+            <img class="center" src="images/02-castle-open.png" alt="locating the castle.jpg file in finder">
+            <li>Click <strong>Open</strong></li>
+
+            <li>Navigate to the Layers Panel on the right side of your work station and double click on the <strong>Background</strong> layer and name it "Castle". If for any reason your Layers Panel isn't visible, from the Menu Bar, go to Windows > Layers to reveal it.</li>
+            <img class="center" src="images/02-renaming-castle.gif" alt="gif showing how to rename a layer in photoshop">
+
+            <li>From the Menu Bar, go to <strong>Image > Mode > CMYK Color</strong>. This will ensure that we are working with correct color mode for printing.</li>
+            <img class="center" src="images/03-cmyk-color-mode.gif" alt="changing the color mode from RGB to CMYK">
+        </ol>
+
+        <h2>Using the Quick Selection Tool and Adding a Layer Mask</h2>
+        <div class="tool-reference">
+            <h1>Quick Selection Tool</h1>
+            <img src="images/05-quickselection-tool-icon.png" alt="quick selection tool icon">
+            <p>The Quick Selection Tool allows you to "paint" a selection using a round brush tip. This tool automatically finds the edges within an image which makes it easier to select specific areas.</p>
+            <p>To adjust the size of the brush, click on either <kbd>[</kbd> to decrease and <kbd>]</kbd> to increase</p>
+            <p>To deselect an area, click on <kbd>Alt</kbd>/<kbd>Option</kbd> while dragging the tool.</p>
+            <p>If it doesn't appear in the Tools Panel, hold down the <strong>Magic Wand Tool</strong> to reveal the <strong>Quick Selection Tool</strong></p>
+        </div>
+        <ol class="instruction-list">
+            <img class="center" src="images/04-quick-selection-tool-under-magicwand.png" alt="picture showing the hidden Quick Selection tool under the Magic Wand tool">
+            <li>Select the <strong>Quick Selection Tool</strong> from the Tools Panel (you may have to hold down the <strong>Magic Wand Tool</strong> to reveal it)</li>
+
+            <li>Select everything in the image except for the sky - notice how the selection expands to the edges automatically! If you accidently select part of the sky hold down <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> while dragging over the area to <strong>deselect</strong> it. Remember to adjust the size of the brush as needed by clicking either <kbd>[</kbd> or <kbd>]</kbd></li>
+            <img class="center" src="images/06-selecting-quickselection.gif" alt="using the Quick Selection tool to select everything in the castle image but the sky">
+
+            <li>Once you have everything but the sky selected, navigate to the bottom of the Layers Panel and <strong>click on the Layer Mask button</strong> (rectangle with a circle in it) to "hide" everything not selected</li>
+            <video class = "large" autoplay loop muted playsinline src="images/07-applying-layer-mask.mp4"><p>clicking the Layer Mask icon to apply one to our selection</p></video>
+
+            <div class="tool-reference">
+                <h2>Layer Mask</h2>
+                <img src="images/08-layer-mask-icon.png" alt="layer mask icon from the layers panel">
+                <p>A Layer Mask allows for non-destructive editing to occur to an image. We can "hide" or "reveal" certain parts of an image without making permanent changes to the original. Use the <strong>Brush Tool</strong> with a black fill on a Layer Mask to "erase" parts of an image. Switch to a white fill to bring back parts of the original image.</p>
+            </div>
+
+            <li>To adjust the edges of the selection so they're more or less defined, click on <strong>Select and Mask</strong> from the top bar and in the <strong>Properties Panel</strong> on the right side, adjust the Transparency and smooth or feather the selection as needed</li>
+            <video class = "large" autoplay loop muted playsinline src="images/09-adjusting-layer-mask.mp4"><p>adjusting layer mask properties after double-clicking on it</p></video>
+        </ol>
+
+        <h2>Adding Adjustment Layers</h2>
+        <p>Adjustment layers allow us to edit the colors, brightness, and contrast of our image non-destructively. Similarly to a Layer Mask, adding an Adjustment Layer will allow our original image to stay intact while the edits are made on separate layers. All of the Adjustment Layers can be found in the Menu Bar at the top under <strong>Layers > Adjustment Layer</strong> or at the bottom of the Layers Panel under the icon that looks like a circle filled in with grey and white.</p>
+
+        <h3>Brightness/Contrast</h3>
+        <p>Adjust the light and shadows in an image with this Adjustment Layer. Make dark images brighter or light images darker.</p>
+
+        <ol class="instruction-list">
+            <li>Go to <strong>Layers > Adjustment Layers > Brightness/Contrast...</strong> or click on the circle icon on the bottom of the Layers Panel and choose Brightness/Contrast...</li>
+            <li>From the <strong>Properties Panel</strong> adjust the <strong>Brightness to 15 and the Contrast to 30</strong>. If this panel doesn't appear, double click on the little sun icon on the Brightness/Contrast layer</li>
+            <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/10-adjusting-brightness-contrast.mp4" type="video/mp4">going to Layer > Layer Adjustment > Brightness/Contrast and adjusting brightness to 15 and contrast to 30</video>
+        </ol>
+
+        <h3>Levels...</h3>
+        <p>This tool has the ability to correct tonal range and color balance of an image by adjusting the shadows, midtones, and highlights</p>
+        <ol class="instruction-list">
+            <li>Go to <strong>Layers > Adjustment Layers > Levels...</strong> or click on the circle icon on the bottom of the Layers Panel and choose Layers...</li>
+            <li>From the <strong>Properties Panel</strong> adjust the shadow input level to 30, the midtone input level to 1, and the highlight input level to 240. If this panel doesn't appear, double click on the levels icon on the Levels layer</li>
+            <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/11-adjusting-levels.mp4" type="video/mp4">going to Layer > Layer Adjustment > Levels and adjusting shadow input level to 30, midtone input level to 1, and highlight input level to 240</video>
+        </ol>
+
+        <h3>Hue/Saturation</h3>
+        <p>This tool allows you to recolor your image, increase or decrease the intensity of specific colors within an image, and/or lighten or darken your image overall.</p>
+        <ol class="instruction-list">
+            <li>Go to <strong>Layers > Adjustment Layers > Hue/Saturation...</strong> or click on the circle icon on the bottom of the Layers Panel and choose Hue/Saturation...</li>
+            <li>From the <strong>Properties Panel</strong> adjust the hue to 170 and leave the saturation and lightness at 0. If this panel doesn't appear, double click on the icon next to the eyeball on the Levels layer. Adjusting the Hue will change the overall color, which adjusting the Saturation will change the intensity of the Hue selected. Lightness will change how bright such hue and saturation appears</li>
+            <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/12-adjusting-hue-saturation.mp4" type="video/mp4">going to Layer > Layer Adjustment > Hue/Saturation and adjusting hue to 170</video>
+        </ol>
+
+        <div class=" center good-to-know">
+            <h1>Black & White</h1>
+            <p>As the name suggests, this adjustment is to make your image black and white. This option is only available in the RGB Color Mode, so go to <strong>Image > Mode > RGB Color</strong> before you begin. Note that if you made any other color adjustments prior to this in CMYK mode, your image's colors will change after you change to RGB</p>
+            <ol class="instruction-list">
+                <li>Go to <strong>Layers > Adjustment Layers > Black & White...</strong> or click on the circle icon on the bottom of the Layers Panel and choose Black & White...</li>
+                <li>From the <strong>Properties Panel</strong> adjust accordingly! If this panel doesn't appear, double click on the icon that looks like a rectangle filled with grey and white on the Black and White layer</li>
+                <li>For our example project, we will NOT adjust our image to RGB and Black and White.</li>
+            </ol>
+        </div>
+
+        <h2>Saving and Exporting</h2>
+        <h3>Saving as a Photoshop File (.psd)</h3>
+        <p>Saving your project as a Photoshop File allows you the opportunity to come back and change or remove any layers with different edits. This file can only be opened on computers that have Adobe Photoshop installed.</p>
+        <ol class="instruction-list">
+            <li>Go to <strong>File > Save As...</strong></li>
+            <li>Give your project an appropriate name. For this project, name it castle</li>
+            <li>Specify the location (Desktop or specific folder) you would like to save it in</li>
+            <li>Select "Photoshop" as the Format and make sure "Layers" is checked</li>
+            <li>Click <strong>Save</strong></li>
+        </ol>
+        <p>For this example, we will use this file when transitioning into Illustrator!</p>
+
+        <h3>Exporting as a JPEG or PNG</h3>
+        <p>Exporting your Photoshop project as a JPEG or PNG allows you to share your image to everyone on the internet - even if they don't have Photoshop.</p>
+        <ol class="instruction-list">
+            <li>Go to <strong>File > Export... > Export As...</strong></li>
+            <li>Select "JPEG" or "PNG" for the Format</li>
+            <li>Click "Export All..."</li>
+            <li>Give your project an appropriate name</li>
+            <li>Specify the location (Desktop or specific folder) you would like to save it in</li>
+            <li>Click <strong>Save</strong></li>
+        </ol>
+        <li>For this example, we will not save as a JPEG or PNG</li>
+
+    </section>
+
+    <section class="topic">
+        <h1>Starting a New Project in Illustrator</h1>
+        <p>In Illustrator, a project consists of one or more <strong>artboards</strong>. When you start a new project, you will create an artboard </p>
+        <ol class="instruction-list">
+            <li>
+                <p>Create a New Document by selecting <strong> File > New... </strong> (or the keyboard shortcut: Cmd + N on a Mac or Ctrl + N on Windows).</p>
+            </li>
+            <img src="images/01-new-document.png" alt="new document set-up example">
+            <li>
+                Click the <strong>Print</strong> preset and enter the following settings:
+                <ul>
+                    <li>
+                        Width: <strong>15 inches</strong></li>
+                    <li>
+                        <p>Height: <strong>10 in</strong></p>
+                    </li>
+                    <li>
+                        <p>Number of Artboards: <strong>1</strong></p>
+                    </li>
+                    <li>
+                        <p>Color Mode: <strong>CMYK Color</strong></p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>When you are done, you should have a blank project that looks similar to the following:</p>
+                <img src="images/01a-NewDocumentCreated.png" alt="blank document example">
+            </li>
+        </ol>
+        <p>To add additional Artboards to change the size or arrangement of the artboards in your project, use the <strong>Artboard tool</strong> (keyboard shortcut: Shift + O).</p>
+
+        <h2>Add The Control Panel</h2>
+        <img src="images/02a-ControlPanel.PNG" alt="the Control Panel options when on the Selection Tool">
+        <p>Add the Control Panel to your workspace by going to <strong>Window > Control Panel</strong>. This will bring up more tools for us to work with on Illustrator. Notice that the Control Panel will change according to the Tool we are selected on.</p>
+        <img class="center" src="images/02-AddControlPanel.PNG" alt="Windows > Control Panel">
+
+        <h2>Add Guides</h2>
+        <p>To make managing your project easier, we will add guides for a visual reference so we can get a sense for where the <strong>back cover, spine, and front cover</strong> will be on the artboard. </p>
+        <ol class="instruction-list">
+            <li>
+                <p>Enable Rulers by choosing <strong>View > Rulers > Show Rulers </strong>or using the shorcut Cmd + R (Mac) or Ctrl+R (Windows)</p>
+                <img class="center" src="images/02b-ShowRulers.PNG" alt="View > Rulers > Show Rulers">
+            </li>
+            <li>
+                <p>To create a guide, click and hold on the left ruler and drag to the 7 inch mark. </p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/03-guides.mp4" type="video/mp4">example of dragging guides from ruler to 7 inch mark</video>
+            </li>
+
+            <li>
+                <p>To make sure the guide is at exactly 7 inches, use the <strong>Transform</strong> option at the top of the screen from the Control Panel. If you do not see the Transform controls, click the word <strong>Transform</strong> or open the Transform panel by going to <strong>Window > Transform</strong>.</p>
+                <br>
+                <p>Set the X value to <strong>7 inches</strong></p>
+                <br>
+                <p>If the Transform options are greyed-out, your guide might be locked. To unlock them, go to <strong>View > Guides > Unlock Guides</strong></p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/02-CreateGuides-transform.mp4" type="video/mp4">Putting x value of 7 in Transform panel</video>
+            </li>
+            <li>
+                <p>Repeat this and create a second guide at the 8 inch mark.</p>
+
+                <img src="images/02a-BothGuidesCreated.png" alt="both guides created at 7 and 8 inch mark">
+
+            </li>
+            <li>
+                <p>When you are done, lock the guides via <strong>View > Guides > Lock Guides</strong></p>
+
+                <img class="center" src="images/03-LockGuides.png" alt="view > guides > lock guides">
+
+            </li>
+
+        </ol>
+    </section>
+    <section class="topic">
+        <h1>Creating the Book Background</h1>
+        <h2>Placing an Image or Project in Illustrator</h2>
+        <p>The Adobe Create Cloud does a great job at allowing users to integrate projects from one software to another. By importing a Photoshop project into Illustrator rather than a raster image saved from a Photoshop project, we can be certain that any future changes made to the Photoshop project will also update in our Illustrator file.</p>
+
+        <p>For this example we will be bringing in the <strong>castle.psd</strong> file we were working on earlier.</p>
+        <ol class="instruction-list">
+            <li>First <strong>zoom out</strong> (<kbd>Ctrl -</kbd>/<kbd>Cmd -</kbd>) of your artboard enough so there is a lot of grey area around it. This will make placing your image easier.</li>
+
+            <li>Then go to <strong>File > Place</strong> (<kbd>Cmd + P</kbd>/<kbd>Ctrl + P</kbd>) and for this example, choose <strong>castle.psd</strong>. Click and drag until the image covers the entire artboard.</li>
+            <p>(Don't worry if it is outside the edge of the artboard - we take care of this in the next step)</p>
+            <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/09-placeimage.mp4" type="video/mp4">example of how to use the place image feature</video>
+        </ol>
+        <p>You can also choose to place any raster image in your project if you did not edit anything in Photoshop.</p>
+
+
+        <h2>Making a Clipping Mask (Cropping an Image)</h2>
+        <p>If your image is too large, you may want to add a Clipping Mask. This will crop you image non-destructively. This means that if you can always go back to the original file by right-clicking and (<kbd>Control</kbd> + Mouse Click for some Macs) selecting "Release Clipping Mask"</p>
+        <ol class="instruction-list">
+            <li>Resize or move your image to your liking with the Selection Tool <kbd>V</kbd></li>
+            <li>
+                <p>Using the <strong>Rectangle Tool</strong> (<kbd>R</kbd>), draw a rectangle that is the same size as our artboard. The rectangle's fill color does not have to be any specific color.</p>
+                <img src="images/10-RectangleTool.png" alt="rectangle tool location">
+            </li>
+            <li>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/11-making-rectangle.mp4" type="video/mp4">using the rectangle tool to create a rectangle with a red fill the size of our canvas</video>
+            </li>
+            <li>
+                <p>Using the <strong>Selection Tool</strong> (<kbd>V</kbd>), drag a selection box over the rectangle and picture to select both of the objects.</p>
+                <p>You can also select both objects by first expanding Layer 1 from the <strong>Layers Panel</strong> and clicking the circles next to each object's sublayer while holding down <kbd>Ctrl</kbd>/<kbd>Cmd</kbd></p>
+            </li>
+            <li>
+                <p>With both layers selected, either <strong>Right Click > Make Clipping Mask</strong> or go to <strong>Object > Clipping Mask > Make</strong></p> to crop the picture to the size of the rectangle.
+
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/12-making-clipping-mask.mp4" type="video/mp4">selecting both image and rectangle, right-clicking and selecting Make Clipping Mask</video>
+            </li>
+        </ol>
+        <div class="center tool-reference">
+            <h2>Blend Modes</h2>
+            <p>Blend modes change how a layer affects the appearance of the layers below it. Open the <strong>Appearance</strong> Panel by going to <strong>Window > Appearance</strong>. Click on the word <em>Opacity</em></p>
+            <img src="images/13-blend-modes.png" alt="Appearance panel opened to display blend mode options">
+            <p>Some of the more commonly used blend modes:</p>
+            <ul>
+                <li>
+                    <p><strong>Normal:</strong> does not affect the layer underneath.</p>
+                </li>
+                <li>
+                    <p><strong>Multiply:</strong> Darkens the pixels underneath it </p>
+                </li>
+                <li>
+                    <p><strong>Overlay:</strong> Give the pixels beneath the color of the selected layer </p>
+                </li>
+                <li>
+                    <p><strong>Color Burn/Saturate:</strong> Intensify the colors underneath the layer</p>
+                </li>
+            </ul>
+        </div>
+
+        <h2>Adding a Blue Appearance</h2>
+        <ol class="instruction-list">
+            <li>
+                <p>Using the <strong>Rectangle Tool</strong> (<kbd>R</kbd>), create a rectangle the size of your artboard. Double-click on the <strong>Fill Color</strong> from the bottom of the Tools Panel and change the color to a dark blue of your choice. In the below example we used the color with hexcode #1B1066</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/15-bluerectangle.mp4" type="video/mp4">creating a rectangle and changing color to dark blue</video>
+            </li>
+            <li>
+                <p>After you've created the rectangle and given it a blue fill color, go to the Layers Panel and make sure the sublayer is above the Clip Group.
+                </p>
+                <img class="center" src="images/16-BlueRectangle.png" alt="rectangle sublayer placement within layers panel">
+
+                <p>Using the <strong>Selection Tool</strong> (<kbd>V</kbd>), select the blue rectangle, open the <strong>Appearance panel</strong> (Window > Appearance), and click the word <em>Opacity</em> at the bottom.</p>
+                <p>Click the dropdown that says <em>Normal</em> and change this to <strong>Multiply</strong>.</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/17-AppearancePanel.mp4" type="video/mp4">appearance panel with the multiply blend mode selected</video>
+                <p>Notice how the appearance of the castle layer changes!</p>
+            </li>
+            <li>
+                <p>After you add the Multiply blend mode to the blue rectangle, go to the Layers Panel and <strong>lock the layer</strong> to avoid accidentally making any changes to it by clicking on the empty space between the eyeball and layer title. A small lock graphic should appear when you click indicating that it is locked and cannot be manipulated!</p>
+                <img class="center" src="images/17b-locklayers.gif" alt="example of how to lock layers in the layers panel">
+            </li>
+        </ol>
+    </section>
+    <section class="topic">
+        <h1>Working With Type</h1>
+
+        <p>Type is one of the main tools you are likely to work with when designing this project. The <strong>Character Panel</strong> in Illustrator allows you to adjust font presentation when working with the Type Tool.</p>
+        <h2>Using the Type Tool and Character Panel</h2>
+        <ol class="instruction-list">
+            <li>Go to <strong>Window > Type > Character</strong> to open the <strong>Character Panel</strong>. We will be using this panel to change the font size, leading, and tracking. Leading is the space between lines of text and Tracking is the space between characters in a text.</li>
+            <img class="center" src="images/18b-characterpanel.PNG" alt="Windows > Type > Character">
+            <img class="center" src="images/18c-characterpanel.PNG" alt="character panel">
+            <li>
+                <p>Select the <strong>Type</strong> tool from the Tools Panel (<kbd>T</kbd>).</p>
+                <img class="center" src="images/tool-type.png" alt="type tool icon">
+            </li>
+            <li>
+                <p>Click and drag a text box on "front cover" (the right side of the artboard) and type: <strong>HARRY POTTER [line break] and the [line break] Philosopher's Stone</strong></p>
+                <br>
+                <p>Manually adding the line breaks (with <kbd>Enter</kbd>/<kbd>Return</kbd>) will make it easier to adjust the individual lines of text later in the project.</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/18-drawtextbox.mp4" type="video/mp4">drawing textbox and writing book title</video>
+            </li>
+            <li>
+                <p>Select all the text by hitting <kbd>Ctrl + A</kbd>/<kbd>Cmd + A</kbd> or by clicking and dragging to highlight the text. From the <strong>Control Panel</strong> at the top of the screen, or from the Character Panel, change the font to <strong>Georgia</strong></p>
+                <img class="center" src="images/18a-georgiafont.PNG" alt="georgia font option">
+            </li>
+
+            <li>
+                <p>Select just the word <strong>HARRY</strong> and set the <strong>font size to 105pt</strong> and <strong>tracking to 60</strong></p>
+            </li>
+            <img class="center" src="images/20-HarryCharacterPanel.png" alt="Character settings for the word HARRY">
+            <li>
+                <p>Highlight the word <strong>POTTER</strong> and change the <strong>font size to 100pt</strong> and <strong>leading to 100pt</strong></p>
+                <img src="images/21-FontSizePotter.png" alt="font size and leading for the word POTTER">
+                <p>Notice how "HARRY" and "POTTER" are aligned with one another because we increased the size and tracking slightly for "HARRY". Also notice how the vertical spacing between lines of text lessened when we changed the leading of "POTTER" to a smaller number. Fun note: <em>leading</em> is pronounced "ledding," which is a throwback to the days of the printing press: the small pieces of metal they used to adjust line spacing were made out of lead.</p>
+            </li>
+
+            <li>
+                <p>Highlight <strong>and the</strong> and change the <strong>font size to 25pt</strong> and <strong>leading to 35</strong></p>
+                <img src="images/21-andthe.PNG" alt="font size and leading to and the">
+                <p>Next, open the <strong>Paragraph</strong> panel and change the <strong>Left Indent <img src="images/left-indent.png" alt="left-indent icon"> to 300pt</strong></p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/21-andthe.mp4" type="video/mp4">changing the postion of 'and the' using the left-indent option</video>
+            </li>
+            <li>
+                <p>Select "<strong>The Philosopher's Stone</strong>" and change the <strong>font size to 40pt, leading <img src="images/leading.png" alt="leading icon"> to 45pt, and tracking <img src="images/Tracking.png" alt="tracking icon"> to 65</strong></p>
+                <img class="center" src="images/23-FontSizePhilosophersStone.png" alt="'Philosopher's Stone' character panel adjustments">
+            </li>
+            <li>
+                <p>Using the Selection Tool (<kbd>V</kbd>), resize the text box to be the width of the text and move the box to be centered on the right side of the artboard.</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/23-movingtext.mp4" type="video/mp4">centering text with selection tool</video>
+            </li>
+        </ol>
+
+
+        <h2>Creating A Clipping Mask For Text</h2>
+        <p>
+            Once we have the text sized and arranged the way we'd like, we'll create a clipping mask to give it a leather texture.
+        </p>
+        <ol class="instruction-list">
+            <li>
+                <p>Go to <strong>File > Place</strong> and select the <strong>leather.jpg</strong> image from the class files you downloaded earlier. Click and drag the image so that it covers all of the text. We will use this textured image to create a clipping mask with the text.</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/24-placetexture.mp4" type="video/mp4">placing leather texture into project</video>
+            </li>
+
+            <li>
+                <p>From the <strong>Layers Panel</strong>, move the text sublayer to be above the leather.jpg image</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/25-textlayerabove.mp4" type="video/mp4">moving the text sublayer above the leather image in the layers panel</video>
+            </li>
+
+            <li>
+                Using the Selection Tool (<kbd>V</kbd>), select both the text and leather texture image while holding down <kbd>Shift</kbd>
+            </li>
+            <li><strong>Right Click > Make Clipping Mask</strong> or go to <strong>Object > Clipping Mask > Make</strong>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/26-makeclippingmask.mp4" type="video/mp4">making a clipping mask from the text and leather image</video>
+            </li>
+
+            <li>
+                <p>Using the Selection Tool, select the text and use the <strong>Appearance Panel</strong> to change the blend mode from Normal to <strong>Screen</strong> to make the text appear paler.</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/27-screenblendmode.mp4" type="video/mp4">changing blend mode to Screen in appearance panel</video>
+            </li>
+        </ol>
+
+
+        <h3>Bonus:</h3>
+        <p>To make the text stand out even more, click on the <strong>fx</strong> button from the Appearance Panel to add a <strong>Layer Effects</strong> like the Warp modes to make the text curve or ripple.</p>
+        <img class="center" src="images/28a-LayerStyle.png" alt="layer effect options from the appearance panel">
+    </section>
+
+    <section class="topic">
+        <h1>Working with Shapes</h1>
+        <p>Next, we're going to build visual elements using simple shapes to create Harry's glasses and a lightning bolt.</p>
+
+        <h2>Creating Harry's Glasses</h2>
+        <ol class="instruction-list">
+            <li>
+                <p>To get started, let's change our stroke color and stroke width.</p>
+                <p>Make sure no objects are selected (click on the grey area around the canvas with the <strong>Selection Tool</strong> <kbd>V</kbd>) and change the Stroke's color and width from the <strong>Control Panel</strong> at the top:</p>
+                <ul>
+                    <li>
+                        <p><strong>Fill color: </strong> None</p>
+                    </li>
+                    <li>
+                        <p><strong>Stroke color: </strong> Light Grey</p>
+                    </li>
+                    <li>
+                        <p><strong>Stroke Width: </strong> 10pt</p>
+                    </li>
+                </ul>
+                <img src="images/29a-StartGlassesStrokeColor.png" alt="stroke color and width for glasses">
+            </li>
+            <h3>Using the Ellipse Tool (L)</h3>
+            <li>
+                <p>Select the<strong> Ellipse Tool</strong> <kbd>L</kbd> from the Tools Menu. If you don't see it, click and hold down the Rectangle tool to reveal more shapes.</p>
+                <img class="center" src="images/29b-EllipseTool.png" alt="ellipse tool icon from tools panel">
+            </li>
+            <li>
+                <p>Click and drag on your canvas to form an ellipse. Remember to hold down <kbd>Shift</kbd> to create a perfect circle.</p>
+
+                <div class="centered-image-large">
+                    <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/29-startglasses.mp4" type="video/mp4">creating first glasses lens with ellipse tool</video>
+                </div>
+
+            </li>
+
+            <li>
+                <p>We're going to make a copy of this circle and paste it exactly on top of the other so we can resize it to make a smaller, inner circle.</p>
+                <ul>
+                    <li>Select the circle with the <strong>Selection Tool</strong> <kbd>V</kbd></li>
+                    <li>Go to <strong>Edit > Copy</strong> to make copy of the circle</li>
+                    <li>Go to <strong>Edit > Paste In Place</strong> to paste the copy right on top of the original circle. (Note that you won't see a difference right away after you paste in place.)</li>
+                </ul>
+                <img class="center" src="images/29d-PasteInPlace.png" alt="paste in place from edit menu">
+
+            </li>
+            <li>
+                <p>After pasting in place, resize the second circle to be smaller and inside the first. Do this with the <strong>Selection Tool</strong> <kbd>V</kbd> and drag the handles at the edge of the bounding box to resize while holding down <kbd>Shift</kbd> and <kbd>Alt/Option</kbd> until you let go of the mouse click.</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/30-secondglassescircle.mp4" type="video/mp4">resizing circle copy to be smaller</video>
+                <p>Holding <kbd>Shift</kbd> will resize will keeping the original shape</p>
+                <p>Dragging while holding <kbd>Alt/Option</kbd> will resize while keeping the center of the circle in place.</p>
+            </li>
+
+            <h3>Using the Scissors Tool (C)</h3>
+            <p>We only want the lower left part of the inner circle, so we're going to use the <strong>Scissors Tool</strong> to break apart the inner shape.</p>
+            <li>
+                <p>Select the <strong>Scissors Tool</strong> <kbd>C</kbd>. It is one of the shapes underneath the Eraser tool:</p>
+                <img class="center" src="images/31-ScissorsTool.png" alt="scissors tool icon">
+            </li>
+
+            <li>
+                <p>With the Scissors Tool, click the <strong>Left</strong> and <strong>Bottom</strong> anchor points to separate the circle into two parts. Then, use the Selection Tool <kbd>V</kbd> to select the upper-right part of the circle and hit <kbd>Delete</kbd> or <kbd>Backspace</kbd> to remove it.
+                </p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/31-usingscissorstool.mp4" type="video/mp4">using the scissors tool </video>
+            </li>
+            <h3>Using the Width Tool (Shift + W)</h3>
+            <p>Next, we're going to use the <strong>Width Tool</strong> to adjust our inner circle's stroke in interesting ways.</p>
+            <li>
+                <p>Select the <strong>Width Tool</strong> <kbd>Shift</kbd> + <kbd>W</kbd> from the Tools Panel:</p>
+                <img class="center" src="images/33a-LineWidthTool.png" alt="width tool icon">
+            </li>
+
+            <li>
+                <p>Using the Width Tool, click and drag the end of the inner circle to narrow the stroke width for that part of the line:</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/34a-linewidthfirst.mp4" type="video/mp4">adjusting top width of line with the width tool</video>
+                <p>Drag the middle part of the line so it is wider than the end:</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/34b-linewidthsecond.mp4" type="video/mp4">adjusting middle width of line with the width tool</video>
+                <p>Finally, drag the other end so the line tapers off:</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/34c-linewidththird.mp4" type="video/mp4">adjusting bottom width of line with the width tool</video>
+            </li>
+            <h3>Completing the Glasses</h3>
+            <li>
+                <p>The next step is to make a copy of this first lens.</p>
+                <p>Using the <strong>Selection Tool</strong> <kbd>V</kbd>, hold down <kbd>Shift</kbd> and select both the outer circle and inner line.</p>
+                <p>Click and drag the shapes while holding <kbd>Alt/Option</kbd> and <kbd>Shift</kbd> to make a copy that is perfectly aligned with the original.</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/35a-copycircle.mp4" type="video/mp4">copying the first lens using alt/option and shift key</video>
+            </li>
+
+
+
+            <li>
+                <p>After making the copy, we're going to use the <strong>Pen tool</strong><kbd>P</kbd> to create a line between them for the nose piece.</p>
+                <img class="center" src="images/36b-PenTool.png" alt="pen tool icon">
+
+                <p><strong>Click once</strong> on the left lens to start the curve, then <strong>click and drag</strong> down and to the right on the right lens to create the curved line. Hit <kbd>Enter</kbd> to complete the line</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/36-pentoolline.mp4" type="video/mp4">creating a curved line with the pen tool</video>
+            </li>
+
+            <li>
+                <p>Next, use the <strong>Ellipse tool</strong> <kbd>L</kbd> to create small perfect circles for the earpieces. Remember to use <kbd>Shift</kbd> and <kbd>Alt/Option</kbd> to drag an aligned copy of the first circle</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/37-smallcircles.mp4" type="video/mp4">creating small circles</video>
+            </li>
+
+            <h3>Grouping Objects</h3>
+            <li>
+                <p>Use the <strong>Selection Tool</strong> <kbd>V</kbd> click all of the pieces of the glasses and group them by choosing <strong>Object > Group</strong> or <strong>Right-Click > Group</strong> (<kbd>Cmd + G</kbd>/<kbd>Ctrl + G</kbd>) and align the group under the text.</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/38-grouping.mp4" type="video/mp4">grouping objects</video>
+            </li>
+
+        </ol>
+
+        <h2>Using Image Trace to Create a Lightning Bolt</h2>
+        <p>Illustrator gives you the option to vectorize a raster image such as a scanned image through the "Image Trace" option. We will place our scanned image of a hand drawn lightning bolt into Illustrator and image trace it so that we can edit it further.</p>
+
+
+        <ol class="instruction-list">
+            <h3>Image Tracing and Expanding</h3>
+            <li>Go to <strong>File > Place</strong> and select the <strong>scanned.jpg</strong> image from the class files you downloaded earlier</li>
+            <li>Drag the image out on your canvas</li>
+            <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/51-placing-scanned-image.mp4" type="video/mp4">going to File > Place.. > scanned.jpg and dragging image on canvas</video>
+            <li>From the Control Panel above, click on <strong>Image Trace</strong></li>
+            <li>Click on the <strong>Image Trace Panel icon</strong> to open the settings</li>
+            <li>Check "Preview" to be able to preview your changes</li>
+            <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/52-image-trace-panel.mp4" type="video/mp4">clicking the image trace button on the Control Panel and opening the image trace panel icon</video>
+            <li>Change the Threshhold to 50</li>
+            <li>Click on Advanced and change the Paths to 10%, Corners to 80%, and Noise to 100px</li>
+            <li>Make sure that the "Fills", "Snap Curves to Lines" and "Ignore White" options are checked</li>
+            <img class="center" src="images/53-image-trace-settings.png" alt="image trace panel settings">
+            <li>Click the small "x" in the upper-right hand corner of the panel to exit out of it.</li>
+            <li>From the Control Panel above, click <strong>Expand</strong></li>
+            <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/54-expand.mp4" type="video/mp4">exiting out of the image trace panel and clicking the expand button from the control panel</video>
+        </ol>
+
+        <ol class="instruction-list">
+            <h3>Live Paint and Gradients</h3>
+            <li>Making sure your lightning bolt is selected, go to <strong>Object > Live Paint > Make</strong>. This will make the inside of your shape "paintable"</li>
+            <img class="center" src="images/55-livepaint-make.png" alt="object >live paint > make option under the menu bar">
+            <li>Navigate to the Tools Panel and find the <strong>Live Paint Bucket Tool</strong> (it may be under the Shpae Builder Tool)</li>
+            <img class="center" src="images/56-livepaint-bucket-tool.png" alt="live paint bucket tool found under the shape builder tool in the tools panel">
+            <li>Navigate to the Fill Color menu and click on the Swatch Menu panel icon. Go to <strong>Gradients > Metals</strong></li>
+            <img class="center" src="images/57-swatches.gif" alt="opening the swatches library panel from the fill menu and selecting the metals library under gradients">
+            <li>From the Metals library, click on the first option</li>
+            <li>Using the <strong>Live Paint Bucket Tool <kbd>K</kbd></strong> fill in the inside and outside of the lightning bolt</li>
+            <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/58-filling-in-gradient.mp4" type="video/mp4">using the live paint bucket tool to fill in the lightning bolt with the gold gradient color</video>
+            <li>Using the <strong>Selection Tool <kbd>V</kbd></strong>, move the lightning bold so that it right above the glasses</li>
+            <img src="images/59-done-front-cover.png" alt="finished front cover of the book with the title, lightning bolt, and glasses">
+
+        </ol>
+
+
+        <h2>Optional: Creating a Lightning Bolt Using the Shape Builder Tool</h2>
+        <p>In this example we will not create the lightning bolt this way. However, if you are curious as to how to create one using Illustrator tools, here's how:</p>
+        <ol class="instruction-list">
+            <h3>Creating Trapezoids</h3>
+            <li>
+                <p>Using the <strong>Pen Tool</strong> <kbd>P</kbd>, create a trapezoid by simply clicking (without dragging) four times. On the fourth point, click the first point again to close the shape:</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/39-firsttrapezoid.mp4" type="video/mp4">drawing a trapezoid with pen tool</video>
+
+            </li>
+
+            <li>
+                <p>
+                    Using the <strong>Selection Tool</strong> <kbd>V</kbd>, hold <kbd>Alt/Option</kbd> and drag to create a copy of the trapezoid shape. Resize this copy to be slightly smaller than the original:
+                </p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/39b-secondtrapezoid.mp4" type="video/mp4">creating and resizing the second trapezoid</video>
+            </li>
+
+            <li>
+                <p>Repeat to create a third trapezoid, making sure to resize it so that it is slighly smaller than the second trapezoid:</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/39c-thirdtrapezoid.mp4" type="video/mp4">creating and resizing the third trapezoid</video>
+            </li>
+            <h3>Using the Shape Builder Tool</h3>
+            <p>Next we'll use the Shape Builder Tool to join these three shapes into one.</p>
+            <li>
+                <p>Using the <strong>Selection Tool</strong> <kbd>V</kbd>, hold down <kbd>Shift</kbd> and select the three trapezoids</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/39d-selectingall.mp4" type="video/mp4">selecting all the trapezoids with the selection tool</video>
+            </li>
+            <li>
+                <p>Select the <strong>Shape Builder Tool</strong> <kbd>Shift + M</kbd>:</p>
+                <img class="center" src="images/40-ShapeBuilderTool.png" alt="shape builder tool icon">
+            </li>
+
+            <li>
+                <p>Using the <strong>Shape Builder Tool</strong>, drag a line through all of the internal shapes of the trapezoids. After you release the mouse, the trapezoids will be a single shape!</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/41-usingshapebuilder.mp4" type="video/mp4">drawing a line through trapezoids using the shape builder tool</video>
+            </li>
+
+            <li>
+                <p>Once you've joined them into a single shape, use the <strong>Direct Selection Tool</strong> <kbd>A</kbd> to click once and drag the bottom right anchor point down to create the bottom of the lightning bolt: </p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/42-movinganchorpoint.mp4" type="video/mp4">moving anchor point with direct selection tool</video>
+            </li>
+            <li>
+                <p>If you find your lightning bolt to be too wide, narrow, tall, or short, use the <strong>Selection Tool</strong> <kbd>V</kbd> to resize accordingly.</p>
+                <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/43-resizingwidth.mp4" type="video/mp4">resizing width of lightning bolt</video>
+            </li>
+
+            <h3>Adding a Gradient Fill</h3>
+            <p>Next, we're going to use a <strong>Gradient Swatch </strong> for the Fill Color to give the lightning bolt a more dynamic appearance.</p>
+            <li>
+                <p>Open the Swatches Panel by going to <strong>Window > Swatches</strong>.</p>
+                <img src="images/44-windowsswatches.PNG" alt="Windows > Swatches">
+                <p>Click the bottom left icon (that looks like books on a bookshelf) to open the <strong>Swatch Libraries</strong>:</p>
+                <img class="center" src="images/44a-OpenSwatchLibrary.png" alt="swatches panel">
+
+                <p>From the menu that appears, choose <strong>Gradients > Metals:</strong></p>
+                <div class="centered-image-large">
+                    <img class="center" src="images/44b-ChooseGradientSwatches.png" alt="selecting gradients > metals option">
+                </div>
+                <p>This will open the <strong>Metals Panel</strong>:</p>
+                <div class="centered-image-large">
+                    <img class="center" src="images/45-GradientMetals.png" alt="metals panel">
+                </div>
+
+                <p>With the lightning bolt shape selected, choose one of the swatches to apply the gradient Ffill and change the Stroke Color to none (white square with red diagonal slash):</p>
+                <img src="images/46-ApplyGradient.png" alt="applied gradient and no stroke to lightening bolt">
+            </li>
+            <li>
+                <p>Once we've applied the swatch, drag the lightning bolt onto the front cover. In the Layers Panel, move the lightning bold layer to be under the glasses layer. Resize the shape as needed with the Selection Tool <kbd>V</kbd>: </p>
+                <img src="images/47-MoveAndResize.png" alt="final book cover">
+            </li>
+        </ol>
+    </section>
+
+    <section class="topic">
+        <h1>Adding Text To The Spine of the Book Cover</h1>
+        <p>It's expected that books should always have their title on the spine for easy identification!</p>
+        <ol class="instruction-list">
+            <li>Using the <strong>Type Tool</strong> <kbd>T</kbd> drag a wide text box on your artboard</li>
+            <li>In the text box, write the title of your book and change the font, color, size to your liking using the tools we've already learned in this project. For this example we used Georgia font and size 30pt</li>
+            <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/44-makingatextbox.mp4" type="video/mp4">making a text box using the type tool</video>
+            <li>Select the <strong>Rotate Tool</strong> <kbd>R</kbd> from the Tools Panel</li>
+            <img class="center" src="images/45-rotatetool.PNG" alt="rotate tool icon from tools panel">
+            <li>While your text box is still selected, click and drag while holding down <kbd>Shift</kbd> anywhere on the canvas to rotate the text box 90 degrees.</li>
+            <li>With the <strong>Selection Tool</strong> <kbd>V</kbd>, click and drag your rotated text box to the spine of your book cover</li>
+            <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/60-rotating-type-spine.mp4" type="video/mp4">using the rotate tool to rotate the text for the spine</video>
+        </ol>
+    </section>
+
+    <section class="topic">
+        <h1>Adding Text to the Back of the Book Cover</h1>
+        <p>All book covers have some type of summary or reviews on the back. Remember to add this to your project!</p>
+
+        <ol class="instruction-list">
+            <li>
+                <p>Depending on the complexity of your book cover design, you might want to add a slightly transparent rectangle behind your text to make sure it is legible.</p>
+                <p>Using the <strong>Rectangle Tool</strong> <kbd>R</kbd>, make a rectangle that covers the back part of your book cover (or as much as your text will need) and change the <strong>Fill to White</strong> and <strong>Stroke to none</strong></p>
+                <img src="images/48-whitebackground.PNG" alt="white rectangle">
+            </li>
+            <li>Go to <strong>Window > Appearance</strong>, and while the white rectangle is still selected, click on the most bottom "Opacity" from the Appearance Panel</li>
+            <li>The Opacity is defaulted to be 100%. Change this to whatever amount you find to be reasonable considering the design. In this example, we'll<strong> lower it to 50%</strong></li>
+            <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/49-lessopacity.mp4" type="video/mp4">lowering the opacity from 100% to 50% from the appearance panel</video>
+            <li>Using the <strong>Type Tool</strong> <kbd>T</kbd>, drag a text box that fits within the white rectangle you created.</li>
+            <li>Remember to change the size and font from the <strong>Character Panel</strong> and rest the paragraph indentation from the <strong>Paragraph Panel</strong></li>
+            <video class = "large" autoplay="true" loop="true" muted="true" playsinline="true"><source src="images/50-resetingtype.mp4" type="video/mp4">reseting the character and paragraph panels</video>
+        </ol>
+    </section>
+
+    <section class="topic">
+        <h1>Saving Your Project</h1>
+        <p>Once you're done with your project, the final step is to Save it as an Illustrator File and PDF file for printing. </p>
+        <h2>Saving as and Illustrator File</h2>
+        <p>To save as an Illustrator File, go to <strong>File > Save As...</strong> and save as <strong>Adobe Illustrator (.AI)</strong> in a location you know where to find later</p>
+        <h2>Packaging a Project</h2>
+        <p>If you have "Placed" images in you Illustrator project, it's smart to "Package" your project in order to keep all links to your image references in one location. Packaging creates a new folder with all of the fonts and images used in the project, making the project available to open with no broken links. Note that this type of saving is only needed when using a downloaded font or placed image.</p>
+        <ol class="instruction list">
+            <li>
+                <p>To Package a project, go to <strong>File > Package...</strong>. If you haven't already saved it as an Illustrator File, it will prompt you to do that first before packaging.</p>
+            </li>
+            <li>
+                <p>After saving as an Illustrator File in a specific location, a Package box will appear</p>
+            </li>
+            <li>
+                <p>In the Package dialogue box, make sure the location you choose is one you'll be able to find later</p>
+            </li>
+            <li>
+                <p>If they aren't already, check all the boxes under options and then click <strong>Package</strong></p>
+                <img class="center" src="images/packaging.PNG" alt="Package dialogue box">
+            </li>
+        </ol>
+        <h2>Saving as a PDF</h2>
+        <p>TO save as a PDF, simply select <strong>File > Save As</strong> and save the file as an <strong>Adobe PDF</strong> in a location you know where to find later.</p>
+    </section>
+    <!-- END MAIN CONTENT -->
+</body>
+
+</html>
